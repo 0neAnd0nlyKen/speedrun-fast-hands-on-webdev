@@ -5,7 +5,7 @@ import (
 	"net/http"
 )
 
-func main() {
+func Serve() {
 	r := http.NewServeMux()
 	r.HandleFunc("GET /", HomeHandler)
 	http.ListenAndServe(":8080", r)

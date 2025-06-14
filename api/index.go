@@ -18,8 +18,8 @@ func HomeHandler(w http.ResponseWriter, r *http.Request) {
 	}
 }
 
-func Serve() {
-	r := http.NewServeMux()
-	r.HandleFunc("GET /", HomeHandler)
-	http.ListenAndServe(":8080", r)
-}
+// func Serve() {
+// 	r := http.NewServeMux()
+// 	r.HandleFunc("GET /", HomeHandler)
+// 	http.ListenAndServe(":8080", r)
+// }

@@ -7,5 +7,20 @@
 </head>
 <body>
     hello world listening and serving
+    <!-- try to access api route -->
+    <button id="fetchBtn">Fetch from API</button>
+    <pre id="result"></pre>
+    <script>
+    document.getElementById('fetchBtn').onclick = async function() {
+        try {
+            const res = await fetch('http://localhost:8080/');
+            const data = await res.json();
+            document.getElementById('result').textContent = JSON.stringify(data, null, 2);
+        } catch (err) {
+            document.getElementById('result').textContent = 'Error: ' + err;
+        }
+    };
+    </script>
+
 </body>
 </html>

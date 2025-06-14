@@ -1,26 +1,25 @@
 package handler
 
 import (
-	"fmt"
+	"encoding/json"
 	"net/http"
 )
 
-func HtmlRendering(w http.ResponseWriter, r *http.Request) {
+func HomeHandler(w http.ResponseWriter, r *http.Request) {
+	dataJson := map[string]interface{}{
+		"data": map[string]interface{}{
+			"message": "Hello World!",
+		},
+	}
 
-	var name string = "Kendrick"
-
-	htmlContent := fmt.Sprintf(`
-	<!DOCTYPE html>
-	<html>
-	<head>
-		<title>Go HTML Rendering</title>
-	</head>
-	<body>
-		<h1>Hello, %s! This is a HTML document rendered with Go!</h1>
-	</body>
-	</html>
-	`, name)
-	fmt.Fprint(w, htmlContent)
+	err := json.NewEncoder(w).Encode(dataJson)
+	if err != nil {
+		http.Error(w, "Failed to encode JSON", http.StatusInternalServerError)
+	}
 }
 
-// https://vercel.com/0neand0nlykens-projects/speedrun-fast-hands-on-webdev/DMWAdd9prGmxx3k8ADqYFZrmVMN4
+func Serve() {
+	r := http.NewServeMux()
+	r.HandleFunc("GET /", HomeHandler)
+	http.ListenAndServe(":8080", r)
+}

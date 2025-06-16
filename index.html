@@ -1,3 +1,89 @@
+<<<<<<< Updated upstream
 <body>
     hello world
 </body>
+=======
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/htmx.org@2.0.4" integrity="sha384-HGfztofotfshcF7+8n44JQL2oJmowVChPTg48S+jvZoztPfvwD79OC/LTtG6dMp+" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
+</head>
+<body>
+    <header style="
+        background: #333; color: #fff; 
+        padding: 1em; text-align: center;">
+        <h1>SPEEDRUN FAST-HANDS-ON WEBDEV BASICS</h1>
+    </header>
+
+    <div style="display: flex; min-height: 80vh;">
+
+        <nav style="width: 200px; background: #222; color: #fff; row-gap: 40px;">
+            <ul>
+                <li><a href="http://localhost:3000/">Home</a></li>
+                <li><a href="http://localhost:3000/about/" style="color: #fff; text-decoration: none;">about</a></li>
+            </ul>
+        </nav>
+        <main style="flex: 1; padding: 2em;">
+            <div>
+                <form hx-post="/api/users" hx-target="this" hx-swap="innerHTML">
+                    <div><label for="username">siapa namamu?</label></div>
+                    <div><input type="text" name="username" id="username"></div>
+                    <div><input type="submit"></div>
+                </form>
+            </div>
+            <p>
+                tanggal: 19 Juni 2025 <br>
+                waktu: join grup wa kami diskusikan! <br>
+                offline: kalau jam kerja bisa dekanat fmipa. kalau malam gacoan paling :v <br>
+                online: zoom(discord?) dan yt livestream(akan ada rekaman) <br>
+            </p>
+            <div class="card">
+                <div class="card-body">
+                    <button data-bs-toggle="collapse" data-bs-target="#jawaban0"> 
+                        <h5 class="card-title">Laporkan eror/bug di google spreadsheets!<img src="/Style=linear.png" alt=""></h5 >
+                    </button>
+                    <div class="collapse" id="jawaban0">
+                        <a href="https://youtube.com/live/XHxGvItH2kQ?feature=share" class="card-link" >yt livestream + rekaman</a>
+                        <a href="https://chat.whatsapp.com/E25mZAmPh3nJayKjubIgh1" class="card-link" >grup wa peserta</a>
+                        <a href="https://docs.google.com/spreadsheets/d/1YA-6abKE2OEGagGFRHatKo8ICjLZTX_ZVpKeJNn7Hlk/edit?usp=sharing" class="card-link" >bugs/error spreadsheet</a>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-body">
+                    <button data-bs-toggle="collapse" data-bs-target="#jawaban1"> 
+                        <h5 class="card-title" >SETUP SEBELUM SESI <img src="/Style=linear.png" alt=""></h5 >
+                    </button>
+                    <div class="collapse" id="jawaban1">
+                        <h5 class="card-subtitle">gugel carany sendiri</h5>
+                        <p class="card-text">Install Golang</p>
+                        <p class="card-text">Install Vercel CLI (install npm atau pnpm dulu mungkin)</p>
+                        <p class="card-text">Install VScode</p>
+                        <p class="card-text">Register akun GitHub (untuk vercel)</p>
+                        <p class="card-text">Install Github desktop</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-body">
+                    <button data-bs-toggle="collapse" data-bs-target="#jawaban2"> 
+                        <h5 class="card-title">Laporkan eror/bug di google spreadsheets!<img src="/Style=linear.png" alt=""></h5 >
+                    </button>
+                    <div class="collapse" id="jawaban2">
+                        <h5 class="card-subtitle">kopas bug di barisan baru, kami reply di kolom sebelahnya!</h5>
+                        <a href="https://docs.google.com/spreadsheets/d/1YA-6abKE2OEGagGFRHatKo8ICjLZTX_ZVpKeJNn7Hlk/edit?usp=sharing" class="card-link" >google sheets link</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- <div><input type="button" hx-get="/api/users" hx-target="this" hx-swap="outerHTML"></div> -->
+        </main>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous"></script>    
+</body>
+</html>
+>>>>>>> Stashed changes
